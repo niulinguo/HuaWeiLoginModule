@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.niles.huawei_login">
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.huawei.anyoffice.permisson.SIGNATURE"/>
+
+
+    <application>
+
+        <!-- 登录界面（统一认证需要） -->
+        <activity
+            android:name="com.huawei.anyoffice.sdk.ui.LoginAuthActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize"/>
+        <!-- 登录配置界面（统一认证需要） -->
+        <activity
+            android:name="com.huawei.anyoffice.sdk.ui.LoginConfigActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize"/>
+        <!-- SDK中感知终端网络变更（统一认证需要） -->
+        <receiver android:name="com.huawei.anyoffice.sdk.network.NetworkReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife"/>
+            </intent-filter>
+        </receiver>
+        <!-- SDK中感知锁屏事件，解锁后探测重连隧道功能-->
+        <receiver android:name="com.huawei.anyoffice.sdk.network.ScreenOnReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <!-- webapp界面（webapp控件需要） -->
+        <activity android:name="com.huawei.anyoffice.sdk.ui.WebAppActivity"/>
+        <!-- rar文档界面（打开文档需要） -->
+        <activity android:name="com.huawei.anyoffice.sdk.doc.ui.RarViewer"/>
+
+        <!-- 文档浏览界面（打开文档需要） -->
+        <activity
+            android:name="com.huawei.anyoffice.sdk.doc.ui.SDKDocViewer"
+            android:label="@string/app_name"/>
+
+
+    </application>
+</manifest>

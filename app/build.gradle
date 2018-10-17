@@ -1,14 +1,22 @@
 apply plugin: 'com.android.application'
 
+Properties properties = new Properties()
+InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream()
+properties.load(inputStream)
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.niles.huaweiloginmodule"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode Integer.parseInt(VERSION_CODE)
+        versionName VERSION_NAME
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'GATEWAY', "\"${properties.getProperty('GATEWAY')}\""
+        buildConfigField 'String', 'USERNAME', "\"${properties.getProperty('USERNAME')}\""
+        buildConfigField 'String', 'PASSWORD', "\"${properties.getProperty('PASSWORD')}\""
     }
     buildTypes {
         release {

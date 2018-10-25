@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity implements AuthResultListene
 
     public void onButtonClicked(View view) {
         LoginManager.doAuthentication(this, new LoginConfig.Builder()
-                .setAuthInBackground(true)
+                .setAuthInBackground(false)
                 .setGateway(BuildConfig.GATEWAY)
-                .setUsername(mUsernameEditView.getText().toString())
-                .setPassword(mPasswordEditView.getText().toString())
+//                .setUsername(mUsernameEditView.getText().toString())
+//                .setPassword(mPasswordEditView.getText().toString())
                 .setAuthResultListener(this)
                 .build());
     }

@@ -17,6 +17,10 @@ android {
         buildConfigField 'String', 'GATEWAY', "\"${properties.getProperty('GATEWAY')}\""
         buildConfigField 'String', 'USERNAME', "\"${properties.getProperty('USERNAME')}\""
         buildConfigField 'String', 'PASSWORD', "\"${properties.getProperty('PASSWORD')}\""
+
+        ndk {
+            abiFilters "armeabi"
+        }
     }
     buildTypes {
         release {

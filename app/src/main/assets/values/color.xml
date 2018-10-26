@@ -1,0 +1,14 @@
+    <resources>
+        <!--登录按钮背景颜色 -->
+        <color name="loginbutton_color">#0989EC</color>
+        <!--登录按钮按下时背景颜色 -->
+        <color name="loginbutton_color_press">#0989EC</color>
+        <!--用户名编辑框背景颜色 -->
+        <color name="user_background_color">#FFFFFF</color>
+        <!--密码编辑框背景颜色 -->
+        <color name="pwd_background_color">#FFFFFF</color>
+        <!--用户名边框颜色 -->
+        <color name="user_border_color">#FFFFFF</color>
+        <!--密码边框颜色 -->
+        <color name="pwd_border_color">#FFFFFF</color>                
+    </resources>

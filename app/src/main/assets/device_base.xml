@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+        <item deviceid = "1111">0123456789AB</item>
+        <item deviceid = "1111">004999010640000</item>     
+        <item deviceid = "1111">357507050008880</item>     
+        <item deviceid = "1111">353627055435930</item>  
+        <item deviceid = "1111">864323020992989</item> 
+        <item deviceid = "1111">865164020560841</item> 
+        <item deviceid = "1111">353627055435930</item> 
+        <item deviceid = "1111">0123456789ABCDEF</item>
+	    <item deviceid = "1111">865164020207211</item> 
+        <item deviceid = "1111">352315056803253</item>
+        <item deviceid = "1111">352315052315294</item>
+		<item deviceid = "1111">353627055435922</item>
+		<item deviceid = "1111">357458040013533</item>
+		<item deviceid = "1111">A0000049BA7A23</item>
+		<item deviceid = "1111">a0000049ba7a23</item>
+		<item deviceid = "1111">864036020351044</item>
+		<item deviceid = "1111">353627051217423</item>
+		<item deviceid = "1111">357458042646975</item>	
+		<item deviceid = "1111">a000005559a67a</item>	
+		<item deviceid = "1111">a0000055ab17e2</item>		
+</resources>

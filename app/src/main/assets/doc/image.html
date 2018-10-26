@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html manifest='' lang='zh-CN'>
+<head>
+	<meta charset='UTF-8'>
+	<style type='text/css'>
+		body {
+			height: 100%%;
+			background-color: #FFFFFF;
+			margin: 0;
+		}
+		#loading {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-position: center; 
+			background-repeat: no-repeat; 
+			background-size: contain;
+		}
+	</style>
+	<script>
+		function getQueryParams(){
+        	var url = location.search; 
+   			var theRequest = new Object(); 
+   			if (url.indexOf("?") != -1) { 
+      			var str = url.substr(1); 
+      			strs = str.split("&"); 
+      			for(var i = 0; i < strs.length; i ++) { 
+         			theRequest[strs[i].split("=")[0]]=decodeURI(strs[i].split("=")[1]); 
+      			} 
+   			} 
+   			return theRequest; 
+        }
+        function showImage() {
+        	var args=getQueryParams();
+        	var url = "file://" + args['filePath'] + "/" + args['fileName'] + "." + args['suffix'];
+            document.getElementById("loading").style.backgroundImage="url('" + url + "')";
+        }
+	</script>
+</head>
+<body onload='showImage()'>
+	<div id='loading'>
+	</div>
+</body>
+</html>

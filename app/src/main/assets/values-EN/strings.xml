@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--用户名文本框默认显示文本 -->
+    <string name="username">user/phone</string>
+    <!--密码文本框默认显示文本 -->
+    <string name="password">password</string>
+    <!--登录按钮文本框默认显示文本 -->
+    <string name="login">login</string>
+</resources>

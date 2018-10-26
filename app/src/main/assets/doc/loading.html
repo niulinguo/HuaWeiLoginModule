@@ -1,0 +1,67 @@
+﻿<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>error</title>
+		<style>
+			body {
+				font-family: 'Droid Sans','Droid Sans Fallback','Helvetica Neue','Hiragino Sans GB W3',微软雅黑;
+				
+			}
+			p {
+				padding: 0;
+				text-align: center;
+				background-color: transparent;
+				color:red;
+			}
+			@media screen and (max-device-width: 600px) {
+				body {
+					background-position: center 20px;
+					background-size: 60%
+				}
+				#tip {
+					
+					font-size: 16px;
+				}
+			}
+			@media screen and (min-device-width: 601px) {
+				body {
+					background-position: center 120px;
+				}
+				#tip {
+					
+					font-size: 24px;
+				}
+			}
+
+		</style>
+		<script type="text/javascript">
+			function showError(){
+				
+				var language = null;
+				var envLang = navigator.language || 'zh-CN';
+				if(envLang.indexOf('zh-') != -1) 
+				{
+					language = 1;
+				}
+				else
+				{
+					language = 0;
+				}    
+				var ch = '努力加载中...';
+				var en = 'loading...'
+				var text = language ? ch : en;
+				
+				var d=document.getElementById('tip');
+				d.innerHTML = text;
+				
+				d.style.color="black";
+				var marginTop = window.innerHeight/2;
+				d.style.marginTop=marginTop + 'px';
+				d.style.marginLeft='0px';
+			}
+		</script>
+	</head>
+	<body onload="showError()">
+		<p id="tip" ></p>
+	</body>
+</html>

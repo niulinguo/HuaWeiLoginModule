@@ -1,0 +1,17 @@
+<resources>
+     <!--登录图标宽高设置 -->
+    <dimen name="login_logo_width_dp">90</dimen>
+    <dimen name="login_logo_height_dp">90</dimen>
+     <!--用户名输入框宽高设置 -->
+    <dimen name="login_username_width_dp">270</dimen>
+    <dimen name="login_username_height_dp">45</dimen>
+     <!--密码输入框宽高设置 -->
+    <dimen name="login_password_width_dp">270</dimen>
+    <dimen name="login_password_height_dp">45</dimen>
+    <!--用户名与密码输入框间距设置 -->
+    <dimen name="login_inputfield_space">15</dimen>
+    <!--用户名输入框边框粗细设置 -->
+    <dimen name="user_borderwidth_dp">0</dimen>
+    <!--密码输入框边框粗细设置 -->
+    <dimen name="pwd_borderwidth_dp">0</dimen>    
+</resources>
